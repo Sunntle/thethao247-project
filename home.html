@@ -1,0 +1,2710 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Home</title>
+    <link rel="icon" href="favicon.ico" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+
+    <!-- meta facebook -->
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css" />
+    <link rel="stylesheet" href="css/backdoor.css" />
+    <link rel="stylesheet" href="dest/fonts.css" />
+  </head>
+  <style>
+    .cart-hover{
+      position: relative;
+    }
+    .counter-number{
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+      background: red;
+      border: 1px solid red;
+      border-radius: 100%;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+    }
+
+  </style>
+  <body>
+    <!-- HEADER -->
+    <header class="header-wrap">
+      <div class="container container-lg">
+        <div class="header">
+          <div class="row ai-center">
+            <div class="col-3-lg">
+              <div class="header_logo">
+                <div class="logo-box">
+                  <a href=""><img src="./img/logo.png" alt="" /></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-9-lg">
+              <div class="header_main">
+                <div class="header_top">
+                  <div class="header_cart mobile">
+                    <div class="header_item">
+                      <a href="" class="cart-link">
+                        <span class="text"> Giỏ hàng </span>
+                        <span class="cart-hover">
+                          <span class="header_icon"
+                            ><img src="./img/icon-shopping-bag.svg" alt=""
+                          /></span>
+                          <span class="numb">01</span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="header_detail">
+                    <div class="header_item">
+                      <span class="title">Làm việc: </span>
+                      T2 - T7(9:00 AM - 20:00 PM)
+                    </div>
+                    <div class="header_item">
+                      <span class="title">CN: </span>
+                      9:00 AM - 18:00 PM
+                      <span class="header_icon"
+                        ><img src="./img/icon-clock.svg" alt=""
+                      /></span>
+                    </div>
+                  </div>
+                  <div class="header_cta">
+                    <div class="header_stt">
+                      <a href="" class="header_item">
+                        Tình trạng đơn hàng
+                        <span class="header_icon"
+                          ><img src="./img/icon-file-text.svg" alt=""
+                        /></span>
+                      </a>
+                    </div>
+                    <div class="header_account">
+                      <a href="" class="header_item">
+                        <span class="text"> Tài khoản </span>
+                        <span class="header_icon"
+                          ><img src="./img/icon-user.svg" alt=""
+                        /></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="header_mid">
+                  <div class="header_toggle toggle-menu">
+                    <div class="ham">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class="header_search">
+                    <div class="form-wrap">
+                      <form action="">
+                        <div class="form-field">
+                          <input
+                            type="text"
+                            class="form-ctr"
+                            placeholder="Tìm sản phẩm"
+                          />
+                          <div class="form-button">
+                            <button type="submit" class="form-submit">
+                              <img src="./img/icon-search.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="header_bot">
+                  <div class="header_nav">
+                    <ul class="menu-list">
+                      <li class="menu-item">
+                        <a href="" class="menu-link">
+                          <span class="icon"
+                            ><img src="./img/icon-caret-right-red.svg" alt=""
+                          /></span>
+                          Trang chủ</a
+                        >
+                      </li>
+                      <li class="menu-item mega">
+                        <a href="" class="menu-link mega-show">
+                          <span class="icon"
+                            ><img src="./img/icon-hamburger.svg" alt=""
+                          /></span>
+                          Danh mục
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="" class="menu-link">
+                          Khuyến mãi
+                          <span class="header_icon"
+                            ><img src="./img/icon-fire.png" alt=""
+                          /></span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="" class="menu-link">Chính sách bán hàng</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header_info">
+                    <div class="header_info-select toggle-info">
+                      Thông tin
+                      <span class="arrow">
+                        <i class="fa-solid fa-caret-down fa-xs"></i>
+                      </span>
+                    </div>
+                    <div class="header_info-drop">
+                      <div class="account-wrap">
+                        <div class="account_head">
+                          <div class="account_avt">
+                            <img src="./img/user-2.png" alt="" />
+                          </div>
+                          <div class="account_name">Trần Quốc Cương</div>
+                          <div class="account_email">Quoccuong@gmail.com</div>
+                        </div>
+                        <ul class="account_list">
+                          <li class="account_item">
+                            <a href="" class="account_link">
+                              <span class="icon">
+                                <img src="./img/icon-user-black.svg" alt="" />
+                              </span>
+                              Thông tin tài khoản
+                            </a>
+                          </li>
+                          <li class="account_item">
+                            <a href="" class="account_link">
+                              <span class="icon">
+                                <img
+                                  src="./img/icon-file-text-black.svg"
+                                  alt=""
+                                />
+                              </span>
+                              Thông tin tài khoản
+                            </a>
+                          </li>
+                          <li class="account_item">
+                            <a href="" class="account_link">
+                              <span class="icon">
+                                <img src="./img/icon-clock-black.svg" alt="" />
+                              </span>
+                              Lịch sử đơn hàng
+                            </a>
+                          </li>
+                          <li class="account_item">
+                            <a href="" class="account_link">
+                              <span class="icon">
+                                <img src="./img/icon-clock-black.svg" alt="" />
+                              </span>
+                              Đổi mật khẩu
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="account_logout">
+                          <a href="" class="logout-btn">Đăng xuất</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header_cart">
+                    <div class="header_item">
+                      <a href="" class="cart-link">
+                        <span class="te"> Giỏ hàng </span>
+                        <span class="cart-hover">
+                          <span class="header_icon"
+                            ><img src="./img/icon-shopping-bag.svg" alt=""
+                          /></span>
+                          <span class="counter-number" >20
+                        </span>
+                      </a>
+                    </div>
+                    <div class="minicart">
+                      <div class="minicart-container">
+                        <div class="row">
+                          <div class="col-left">
+                            <div class="minicart-title">
+                              Giỏ hàng
+                              <a href="" class="goto-cart">
+                                Xem giỏ hàng
+                                <span class="arrow">
+                                  <i class="fa-solid fa-angles-right fa-xs"></i>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="product">
+                              <div class="product-table">
+                                <div class="product-item block-product">
+                                  <div class="product-item-head">
+                                    <div class="product-about">
+                                      <div class="product-image">
+                                        <div class="img-wrap">
+                                          <a href="">
+                                            <img src="./img/sp-11.png" alt="" />
+                                          </a>
+                                        </div>
+                                      </div>
+                                      <div class="product-name">
+                                        <a href="" class="name">
+                                          Giày Pan Tango II 2023
+                                        </a>
+                                        <div class="color">
+                                          4 màu [<span class="color-inner"
+                                            >Màu trắng</span
+                                          >
+                                          ]
+                                        </div>
+                                        <div class="product-button">
+                                          <span
+                                            class="btn-inner edit block-product-edit-btn"
+                                            >Sửa đơn</span
+                                          >
+                                          <span class="btn-inner remove"
+                                            >Xoá</span
+                                          >
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product-price">
+                                      <div class="text-inner">350,000 đ</div>
+                                    </div>
+                                    <div class="product-qty">
+                                      <span class="label">Số lượng: </span>
+                                      <input
+                                        type="number"
+                                        class="qty-numb"
+                                        readonly
+                                        value="10"
+                                      />
+                                    </div>
+                                    <div class="product-total">
+                                      <div class="price">250,000 đ</div>
+                                      <div class="discount">-33%</div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="product-item-edit block-product-edit"
+                                  >
+                                    <div class="edit-block">
+                                      <div class="edit-block-head">
+                                        <div class="edit-block-item">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              Tồn kho
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              Số lượng
+                                            </div>
+                                            <div class="edit-block-update">
+                                              Cập nhật số lượng
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="edit-block-bot">
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input select-qty-count"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product-item block-product">
+                                  <div class="product-item-head">
+                                    <div class="product-about">
+                                      <div class="product-image">
+                                        <div class="img-wrap">
+                                          <a href="">
+                                            <img src="./img/sp-11.png" alt="" />
+                                          </a>
+                                        </div>
+                                      </div>
+                                      <div class="product-name">
+                                        <a href="" class="name">
+                                          Giày Pan Tango II 2023
+                                        </a>
+                                        <div class="color">
+                                          4 màu [<span class="color-inner"
+                                            >Màu trắng</span
+                                          >
+                                          ]
+                                        </div>
+                                        <div class="product-button">
+                                          <span
+                                            class="btn-inner edit block-product-edit-btn"
+                                            >Sửa đơn</span
+                                          >
+                                          <span class="btn-inner remove"
+                                            >Xoá</span
+                                          >
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product-price">
+                                      <div class="text-inner">350,000 đ</div>
+                                    </div>
+                                    <div class="product-qty">
+                                      <span class="label">Số lượng: </span>
+                                      <input
+                                        type="number"
+                                        class="qty-numb"
+                                        readonly
+                                        value="10"
+                                      />
+                                    </div>
+                                    <div class="product-total">
+                                      <div class="price">250,000 đ</div>
+                                      <div class="discount">-33%</div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="product-item-edit block-product-edit"
+                                  >
+                                    <div class="edit-block">
+                                      <div class="edit-block-head">
+                                        <div class="edit-block-item">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              Tồn kho
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              Số lượng
+                                            </div>
+                                            <div class="edit-block-update">
+                                              Cập nhật số lượng
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="edit-block-bot">
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input select-qty-count"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product-item block-product">
+                                  <div class="product-item-head">
+                                    <div class="product-about">
+                                      <div class="product-image">
+                                        <div class="img-wrap">
+                                          <a href="">
+                                            <img src="./img/sp-11.png" alt="" />
+                                          </a>
+                                        </div>
+                                      </div>
+                                      <div class="product-name">
+                                        <a href="" class="name">
+                                          Giày Pan Tango II 2023
+                                        </a>
+                                        <div class="color">
+                                          4 màu [<span class="color-inner"
+                                            >Màu trắng</span
+                                          >
+                                          ]
+                                        </div>
+                                        <div class="product-button">
+                                          <span
+                                            class="btn-inner edit block-product-edit-btn"
+                                            >Sửa đơn</span
+                                          >
+                                          <span class="btn-inner remove"
+                                            >Xoá</span
+                                          >
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product-price">
+                                      <div class="text-inner">350,000 đ</div>
+                                    </div>
+                                    <div class="product-qty">
+                                      <span class="label">Số lượng: </span>
+                                      <input
+                                        type="number"
+                                        class="qty-numb"
+                                        readonly
+                                        value="10"
+                                      />
+                                    </div>
+                                    <div class="product-total">
+                                      <div class="price">250,000 đ</div>
+                                      <div class="discount">-33%</div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="product-item-edit block-product-edit"
+                                  >
+                                    <div class="edit-block">
+                                      <div class="edit-block-head">
+                                        <div class="edit-block-item">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              Tồn kho
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              Số lượng
+                                            </div>
+                                            <div class="edit-block-update">
+                                              Cập nhật số lượng
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="edit-block-bot">
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input select-qty-count"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product-item block-product">
+                                  <div class="product-item-head">
+                                    <div class="product-about">
+                                      <div class="product-image">
+                                        <div class="img-wrap">
+                                          <a href="">
+                                            <img src="./img/sp-11.png" alt="" />
+                                          </a>
+                                        </div>
+                                      </div>
+                                      <div class="product-name">
+                                        <a href="" class="name">
+                                          Giày Pan Tango II 2023
+                                        </a>
+                                        <div class="color">
+                                          4 màu [<span class="color-inner"
+                                            >Màu trắng</span
+                                          >
+                                          ]
+                                        </div>
+                                        <div class="product-button">
+                                          <span
+                                            class="btn-inner edit block-product-edit-btn"
+                                            >Sửa đơn</span
+                                          >
+                                          <span class="btn-inner remove"
+                                            >Xoá</span
+                                          >
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product-price">
+                                      <div class="text-inner">350,000 đ</div>
+                                    </div>
+                                    <div class="product-qty">
+                                      <span class="label">Số lượng: </span>
+                                      <input
+                                        type="number"
+                                        class="qty-numb"
+                                        readonly
+                                        value="10"
+                                      />
+                                    </div>
+                                    <div class="product-total">
+                                      <div class="price">250,000 đ</div>
+                                      <div class="discount">-33%</div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="product-item-edit block-product-edit"
+                                  >
+                                    <div class="edit-block">
+                                      <div class="edit-block-head">
+                                        <div class="edit-block-item">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              Tồn kho
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              Số lượng
+                                            </div>
+                                            <div class="edit-block-update">
+                                              Cập nhật số lượng
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="edit-block-bot">
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input select-qty-count"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-item select-qty">
+                                          <div class="edit-block-row">
+                                            <div class="edit-block-size">
+                                              Size 39
+                                            </div>
+                                            <div class="edit-block-inventory">
+                                              250 đôi
+                                            </div>
+                                            <div class="edit-block-qty">
+                                              <input
+                                                type="number"
+                                                class="qty-input"
+                                                value="100"
+                                              />
+                                            </div>
+                                            <div class="edit-block-update">
+                                              <div class="btn-wrap">
+                                                <span
+                                                  class="btn-update btn-minus"
+                                                  ><img
+                                                    src="./img/icon-minus.svg"
+                                                    alt=""
+                                                /></span>
+                                                <span
+                                                  class="btn-update btn-plus"
+                                                  ><img
+                                                    src="./img/icon-plus.svg"
+                                                    alt=""
+                                                /></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-right">
+                            <div class="minicart-price">
+                              <div class="title">Tạm tính</div>
+                              <ul class="minicart-detail">
+                                <li class="li">
+                                  <div class="li-left">Mặt hàng</div>
+                                  <div class="li-right">10 SP</div>
+                                </li>
+                                <li class="li">
+                                  <div class="li-left">Shippingg</div>
+                                  <div class="li-right">...</div>
+                                </li>
+                                <li class="li">
+                                  <div class="li-left">Thanh toán</div>
+                                  <div class="li-right">...</div>
+                                </li>
+                                <li class="li">
+                                  <div class="li-left">Giao nhận</div>
+                                  <div class="li-right">...</div>
+                                </li>
+                                <li class="li">
+                                  <div class="li-left">Giao nhận</div>
+                                  <div class="li-right">...</div>
+                                </li>
+                              </ul>
+                              <div class="minicart-price-total">
+                                <span>Tổng</span>
+                                <span class="price">50,000,000 đ</span>
+                              </div>
+                              <a href="" class="minicart-price-pay">
+                                Tiến hành thanh toán
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mega-drop">
+      <div class="mega-container">
+        <div class="mega-cate">
+          <div class="mega-cate-head">
+            <div class="mega-cate-title">Danh mục sản phẩm</div>
+            <a href="" class="mega-cate-more">
+              Xem tất cả danh mục
+              <span class="arrow">
+                <i class="fa-solid fa-angles-right fa-xs"></i>
+              </span>
+            </a>
+          </div>
+          <ul class="mega-cate-list">
+            <li class="mega-cate-item">
+              <a href="" class="item-title">Bóng đá</a>
+              <ul class="list-child">
+                <li class="list-child-item current-menu-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng futal</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày trẻ em</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân tự nhiên</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mega-cate-item">
+              <a href="" class="item-title">Bóng đá</a>
+              <ul class="list-child">
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng futal</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày trẻ em</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân tự nhiên</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mega-cate-item">
+              <a href="" class="item-title">Giày đá bóng</a>
+              <ul class="list-child">
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng futal</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày trẻ em</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân tự nhiên</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mega-cate-item">
+              <a href="" class="item-title">Đặt áo bóng đá</a>
+              <ul class="list-child">
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng futal</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày trẻ em</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân tự nhiên</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mega-cate-item">
+              <a href="" class="item-title">Bóng đá</a>
+              <ul class="list-child">
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá bóng futal</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày trẻ em</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân tự nhiên</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mega-cate-item">
+              <a href="" class="item-title">Phụ kiện bóng đá</a>
+              <ul class="list-child">
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mega-cate-item">
+              <a href="" class="item-title">Phụ kiện bóng đá</a>
+              <ul class="list-child">
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mega-cate-item">
+              <a href="" class="item-title">Môn thể thao khác</a>
+              <ul class="list-child">
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mega-cate-item">
+              <a href="" class="item-title">sportwear</a>
+              <ul class="list-child">
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mega-cate-item">
+              <a href="" class="item-title">Phụ kiện bóng đá</a>
+              <ul class="list-child">
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày đá sân nhân tạo</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Giày giá rẻ</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Quần áo bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+                <li class="list-child-item">
+                  <a href="" class="list-child-link">
+                    <span class="arrow"
+                      ><i class="fa-solid fa-caret-right fa-xs"></i
+                    ></span>
+                    Phụ kiện bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="sc-hero">
+        <div class="hero">
+          <div class="hero_slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="hero_item">
+                    <div class="hero_bg">
+                      <img src="./img/banner-7.jpg" alt="" />
+                    </div>
+                    <div class="container container-lg">
+                      <div class="hero_content">
+                        <div class="hero_title">
+                          <span class="arrow top"
+                            ><img src="./img/arrow-left-white.png" alt=""
+                          /></span>
+                          <span class="title"
+                            >KHO THỂ THAO <br />
+                            SÀI GÒN</span
+                          >
+                          <span class="arrow bot"
+                            ><img src="./img/arrow-right-white.png" alt=""
+                          /></span>
+                        </div>
+                        <div class="hero_des">
+                          Chuyên cung cấp giày, quần, áo, phụ kiện thể thao đa
+                          dạng và uy tín
+                        </div>
+                        <div class="hero_button">
+                          <a href="" class="btn-white">Xem sản phẩm</a>
+                          <a
+                            href="https://www.youtube.com/watch?v=lB3GOcTJiaQ"
+                            class="btn-video"
+                            data-fancybox=""
+                          >
+                            <span class="text">Xem video</span>
+                            <span class="icon"
+                              ><img src="./img/icon-play-btn.svg" alt=""
+                            /></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero_item">
+                    <div class="hero_bg">
+                      <img src="./img/banner-7.jpg" alt="" />
+                    </div>
+                    <div class="container container-lg">
+                      <div class="hero_content">
+                        <div class="hero_title">
+                          <span class="arrow top"
+                            ><img src="./img/arrow-left-white.png" alt=""
+                          /></span>
+                          <span class="title"
+                            >KHO THỂ THAO <br />
+                            SÀI GÒN</span
+                          >
+                          <span class="arrow bot"
+                            ><img src="./img/arrow-right-white.png" alt=""
+                          /></span>
+                        </div>
+                        <div class="hero_des">
+                          Chuyên cung cấp giày, quần, áo, phụ kiện thể thao đa
+                          dạng và uy tín
+                        </div>
+                        <div class="hero_button">
+                          <a href="" class="btn-white">Xem sản phẩm</a>
+                          <a
+                            href="https://www.youtube.com/watch?v=lB3GOcTJiaQ"
+                            class="btn-video"
+                            data-fancybox=""
+                          >
+                            <span class="text">Xem video</span>
+                            <span class="icon"
+                              ><img src="./img/icon-play-btn.svg" alt=""
+                            /></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="hero_item">
+                    <div class="hero_bg">
+                      <img src="./img/banner-7.jpg" alt="" />
+                    </div>
+                    <div class="container container-lg">
+                      <div class="hero_content">
+                        <div class="hero_title">
+                          <span class="arrow top"
+                            ><img src="./img/arrow-left-white.png" alt=""
+                          /></span>
+                          <span class="title"
+                            >KHO THỂ THAO <br />
+                            SÀI GÒN</span
+                          >
+                          <span class="arrow bot"
+                            ><img src="./img/arrow-right-white.png" alt=""
+                          /></span>
+                        </div>
+                        <div class="hero_des">
+                          Chuyên cung cấp giày, quần, áo, phụ kiện thể thao đa
+                          dạng và uy tín
+                        </div>
+                        <div class="hero_button">
+                          <a href="" class="btn-white">Xem sản phẩm</a>
+                          <a
+                            href="https://www.youtube.com/watch?v=lB3GOcTJiaQ"
+                            class="btn-video"
+                            data-fancybox=""
+                          >
+                            <span class="text">Xem video</span>
+                            <span class="icon"
+                              ><img src="./img/icon-play-btn.svg" alt=""
+                            /></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-ctr">
+              <div class="swiper-pagination pagi-cust static"></div>
+              <div class="button-wrap">
+                <div class="swiper-ctr swiper-button-prev static">
+                  <i class="fa-solid fa-angle-left fa-xs"></i>
+                </div>
+                <div class="swiper-ctr swiper-button-next static">
+                  <i class="fa-solid fa-angle-right fa-xs"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DISCOUNT INFO -->
+      <section class="sc-disc-info">
+        <div class="disc-info py-sc">
+          <div class="container">
+            <div class="disc-info_head js-scroll">
+              <h2 class="title-has-icon">
+                <div class="text">
+                  <span class="icon"
+                    ><img src="./img/icon-discount.svg" alt=""
+                  /></span>
+                  <span class="title t-slide-up" data-splitting=""
+                    >Thông tin chiết khấu</span
+                  >
+                </div>
+              </h2>
+            </div>
+            <div class="disc-info_list">
+              <div class="row g-1">
+                <div class="col col-4-sm col-6">
+                  <div class="item">
+                    <div class="item-number" data-count="100">0</div>
+                    <div class="item-about">Giỏ hàng</div>
+                  </div>
+                </div>
+                <div class="col col-4-sm col-6">
+                  <div class="item">
+                    <div class="item-number" data-count="100">0</div>
+                    <div class="item-about">Chờ xác nhận</div>
+                  </div>
+                </div>
+                <div class="col col-4-sm col-6">
+                  <div class="item">
+                    <div class="item-number" data-count="100">0</div>
+                    <div class="item-about">Đang xử lý</div>
+                  </div>
+                </div>
+                <div class="col col-6-lg col-12-sm col-6">
+                  <div class="item">
+                    <div class="item-title">Nhập hàng tháng 02:</div>
+                    <div class="item-des">
+                      Tổng số tiền khách đã mua trong tháng này
+                    </div>
+                    <div class="item-price">100,000,000 đ</div>
+                  </div>
+                </div>
+                <div class="col col-6-lg">
+                  <div class="item">
+                    <div class="item-prog">
+                      <div class="item-title">
+                        Chiết khấu tháng:
+                        <span><img src="./img/alert-circle.png" alt="" /></span>
+                      </div>
+                      <div class="prog">
+                        <div class="prog-wrap progress-block">
+                          <div class="prog-line">
+                            <div class="line-dot-wrap">
+                              <div class="line-dot progress-dot" style="--w:20%">
+                                <div class="dot-text">Chiếc khấu 3%</div>
+                              </div>
+                              <div class="line-dot progress-dot" style="--w:50%">
+                                <div class="dot-text">Chiếc khấu 5%</div>
+                              </div>
+                              <div class="line-dot progress-dot" style="--w:100%">
+                                <div class="dot-text">Chiếc khấu 7%</div>
+                              </div>
+
+                            </div>
+                            <div class="line-total">
+                              <div class="line-current progress-line"  style="width:20%"></div>
+                            </div>
+                          </div>
+                          <div class="prog-bot">
+                            <div class="bot-price">10,000,000 triệu</div>
+                            <div class="bot-tooltip">
+                              <span class="icon"
+                                ><img
+                                  src="./img/icon-warning-triggle.svg"
+                                  alt=""
+                              /></span>
+                              Nhập thêm nhận chiếc khấu cao hơn
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMOTION -->
+      <div class="promotion">
+        <div class="promotion_slider">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="promotion_item">
+                  <div class="promotion_bg">
+                    <img src="./img/banner-sm-1.png" alt="" />
+                  </div>
+                  <div class="promotion_content">
+                    <div class="promotion_label">
+                      Khuyến mãi <br />
+                      giày thể thao cực sốc
+                    </div>
+                    <div class="promotion_title">Lên đến 80%</div>
+                    <a href="" class="promotion_btn">Xem sản phẩm</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="promotion_item">
+                  <div class="promotion_bg">
+                    <img src="./img/banner-sm-2.png" alt="" />
+                  </div>
+                  <div class="promotion_content">
+                    <div class="promotion_label">
+                      Khuyến mãi <br />
+                      giày thể thao cực sốc
+                    </div>
+                    <div class="promotion_title">Lên đến 80%</div>
+                    <a href="" class="promotion_btn">Xem sản phẩm</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="promotion_item">
+                  <div class="promotion_bg">
+                    <img src="./img/banner-sm-3.png" alt="" />
+                  </div>
+                  <div class="promotion_content">
+                    <div class="promotion_label">
+                      Khuyến mãi <br />
+                      giày thể thao cực sốc
+                    </div>
+                    <div class="promotion_title">Lên đến 80%</div>
+                    <a href="" class="promotion_btn">Xem sản phẩm</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mobile"></div>
+        </div>
+      </div>
+
+      <!-- HOME CATEGORIES -->
+      <section class="sc-h-cate">
+        <div class="h-cate pt-sc">
+          <div class="h-cate_head js-scroll">
+            <div class="container">
+              <h2 class="title-has-icon">
+                <div class="text">
+                  <span class="icon"
+                    ><img src="./img/icon-grid.svg" alt=""
+                  /></span>
+                  <span class="title t-slide-up" data-splitting=""
+                    >Danh mục sản phẩm</span
+                  >
+                </div>
+                <a href="" class="btn-all">
+                  <span class="btn-text">Xem tất cả</span>
+                  <span class="btn-arrow"
+                    ><i class="fa-solid fa-angles-right fa-xs"></i
+                  ></span>
+                </a>
+              </h2>
+            </div>
+          </div>
+          <div class="h-cate_list py-10 mt-10">
+            <div class="container">
+              <div class="row g-4">
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-1.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title"><a href="">Giày bóng đá</a></div>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-2.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title">
+                      <a href="">Quần áo bóng đá CLB - ĐTQG</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-3.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title">
+                      <a href="">Đồ thể thao thương hiệu không logo</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="400">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-4.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title">
+                      <a href="">Phụ kiện bóng đá</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="500">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-5.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title"><a href="">Quà bóng đá</a></div>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-6.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title">
+                      <a href="">Quần áo thể thao</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-7.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title">
+                      <a href="">Cầu lông - bóng chuyền bóng rổ</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-8.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title">
+                      <a href="">Patin - ván trượt</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="400">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-9.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title"><a href="">Mặt hàng khác</a></div>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up" data-aos-delay="500">
+                  <div class="h-cate_item">
+                    <div class="h-cate_thumb">
+                      <div class="img-wrap">
+                        <a href="" class=""
+                          ><img src="./img/sp-10.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="h-cate_title">
+                      <a href="">Thời trang, đồ dùng cá nhân</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOME NEWS -->
+      <section class="sc-h-news">
+        <div class="h-news py-sc">
+          <div class="container">
+            <div class="h-news_head js-scroll">
+              <h2 class="title-has-icon">
+                <div class="text">
+                  <span class="icon"
+                    ><img src="./img/icon-news.svg" alt=""
+                  /></span>
+                  <span class="title t-slide-up" data-splitting=""
+                    >Tin tức - Sản phẩm mới</span
+                  >
+                </div>
+              </h2>
+            </div>
+            <div class="h-news_list mt-10">
+              <div class="row gy-3">
+                <div class="col-6-xxs" data-aos="fade-up" data-aos-delay="100">
+                  <div class="h-news_item">
+                    <div class="h-news_thumb">
+                      <div class="img-wrap hover-thumb-overlay">
+                        <a href="">
+                          <img src="./img/thumb-1.jpg" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="h-news_content">
+                      <div class="h-news_title">
+                        <a href="">[Mẫu mới] Giày đá bóng nam</a>
+                      </div>
+                      <div class="h-news_des">
+                        <p class="des">
+                          Lorem ipsum dolor sit amet consectetur. Facilisis
+                          elementum facilisis vitae dolor sed in turpis leo
+                          pulvinar. Ipsum tempor a felis ultrices donec. Aliquet
+                          non vitae vel lacus imperdiet leo fusce.
+                        </p>
+                      </div>
+                      <div class="h-news_btn">
+                        <a href="" class="btn">Xem sản phẩm</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6-xxs" data-aos="fade-up" data-aos-delay="200">
+                  <div class="h-news_item">
+                    <div class="h-news_thumb">
+                      <div class="img-wrap hover-thumb-overlay">
+                        <a href="">
+                          <img src="./img/thumb-2.jpg" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="h-news_content">
+                      <div class="h-news_title">
+                        <a href="">[Mẫu mới] Giày đá bóng nữ</a>
+                      </div>
+                      <div class="h-news_des">
+                        <p class="des">
+                          Lorem ipsum dolor sit amet consectetur. Facilisis
+                          elementum facilisis vitae dolor sed in turpis leo
+                          pulvinar. Ipsum tempor a felis ultrices donec. Aliquet
+                          non vitae vel lacus imperdiet leo fusce.
+                        </p>
+                      </div>
+                      <div class="h-news_btn">
+                        <a href="" class="btn">Xem sản phẩm</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6-xxs" data-aos="fade-up" data-aos-delay="100">
+                  <div class="h-news_item">
+                    <div class="h-news_thumb">
+                      <div class="img-wrap hover-thumb-overlay">
+                        <a href="">
+                          <img src="./img/thumb-3.jpg" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="h-news_content">
+                      <div class="h-news_title">
+                        <a href="">[Mẫu mới] Áo bóng đá</a>
+                      </div>
+                      <div class="h-news_des">
+                        <p class="des">
+                          Lorem ipsum dolor sit amet consectetur. Facilisis
+                          elementum facilisis vitae dolor sed in turpis leo
+                          pulvinar. Ipsum tempor a felis ultrices donec. Aliquet
+                          non vitae vel lacus imperdiet leo fusce.
+                        </p>
+                      </div>
+                      <div class="h-news_btn">
+                        <a href="" class="btn">Xem sản phẩm</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6-xxs" data-aos="fade-up" data-aos-delay="200">
+                  <div class="h-news_item">
+                    <div class="h-news_thumb">
+                      <div class="img-wrap hover-thumb-overlay">
+                        <a href="">
+                          <img src="./img/thumb-4.jpg" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="h-news_content">
+                      <div class="h-news_title">
+                        <a href="">[Mẫu mới] Áo bóng đá</a>
+                      </div>
+                      <div class="h-news_des">
+                        <p class="des">
+                          Lorem ipsum dolor sit amet consectetur. Facilisis
+                          elementum facilisis vitae dolor sed in turpis leo
+                          pulvinar. Ipsum tempor a felis ultrices donec. Aliquet
+                          non vitae vel lacus imperdiet leo fusce.
+                        </p>
+                      </div>
+                      <div class="h-news_btn">
+                        <a href="" class="btn">Xem sản phẩm</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOME BANNDER ADV -->
+      <div class="h-banner-adv">
+        <div class="banner-adv">
+          <div class="adv-wrap" data-aos="zoom-in">
+            <a href=""><img src="./img/banner-1.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OTHER NEWS -->
+      <section class="sc-other-news">
+        <div class="other-news py-sc">
+          <div class="container">
+            <div class="other-news_head js-scroll">
+              <h2 class="title-has-icon">
+                <div class="text">
+                  <span class="icon"
+                    ><img src="./img/icon-news.svg" alt=""
+                  /></span>
+                  <span class="title t-slide-up" data-splitting=""
+                    >Các tin tức khác</span
+                  >
+                </div>
+                <a href="" class="btn-all">
+                  <span class="btn-text">Xem tất cả</span>
+                  <span class="btn-arrow"
+                    ><i class="fa-solid fa-angles-right fa-xs"></i
+                  ></span>
+                </a>
+              </h2>
+            </div>
+            <div class="other-news_list mt-10">
+              <div class="row gy-1">
+                <div class="col-4-sm col-6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="other-news_item">
+                    <div class="other-news_thumb">
+                      <div class="img-wrap hover-thumb-overlay">
+                        <a href="">
+                          <img src="./img/thumb-5.jpg" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="other-news_content">
+                      <div class="other-news_meta">
+                        <div class="date">24 tháng 02, 2023</div>
+                        <div class="by">KhothethaoAZ</div>
+                      </div>
+                      <div class="other-news_title">
+                        <a href="">PSG Trắng 2022/23 - Mẫu áo bóng đá thứ 3 của Paris Saint-Germain vừa ra mắt</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4-sm col-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="other-news_item">
+                    <div class="other-news_thumb">
+                      <div class="img-wrap hover-thumb-overlay">
+                        <a href="">
+                          <img src="./img/thumb-6.jpg" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="other-news_content">
+                      <div class="other-news_meta">
+                        <div class="date">24 tháng 02, 2023</div>
+                        <div class="by">KhothethaoAZ</div>
+                      </div>
+                      <div class="other-news_title">
+                        <a href="">PSG Trắng 2022/23 - Mẫu áo bóng đá thứ 3 của Paris Saint-Germain vừa ra mắt</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4-sm col-6" data-aos="fade-up" data-aos-delay="300">
+                  <div class="other-news_item">
+                    <div class="other-news_thumb">
+                      <div class="img-wrap hover-thumb-overlay">
+                        <a href="">
+                          <img src="./img/thumb-7.jpg" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="other-news_content">
+                      <div class="other-news_meta">
+                        <div class="date">24 tháng 02, 2023</div>
+                        <div class="by">KhothethaoAZ</div>
+                      </div>
+                      <div class="other-news_title">
+                        <a href="">PSG Trắng 2022/23 - Mẫu áo bóng đá thứ 3 của Paris Saint-Germain vừa ra mắt</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="sc-contact">
+        <div class="contact py-sc">
+          <div class="container">
+            <div class="row gy-1">
+              <div class="col-6-sm">
+                <div class="contact_content">
+                  <div class="contact_title title-sc">Liên hệ hỗ trợ</div>
+                  <div class="contact_info mt-8">
+                    <div class="contact_info-item">
+                      <div class="contact_info-title">Gọi tư vấn 0 đặt hàng online (8:30 AM - 21:00 PM mỗi ngày)</div>
+                      <div class="contact_info-phone">
+                        <span class="icon"><img src="./img/icon-phone-call.svg" alt=""></span>
+                        <a href="tel:0902 979 384" class="phone">0902 979 384</a>
+                      </div>
+                      <div class="contact_info-des">
+                        Làm việc tất cả các ngày trong tuần (trừ tết âm lịch)
+                      </div>
+                    </div>
+                    <div class="contact_info-item">
+                      <div class="contact_info-title">Góp ý khiếu nại (8:30 AM - 20:00 PM mỗi ngày)</div>
+                      <div class="contact_info-phone">
+                        <span class="icon"><img src="./img/icon-phone-call.svg" alt=""></span>
+                        <a href="tel:0902 979 384" class="phone">0902 979 384</a>
+                      </div>
+                      <div class="contact_info-des">
+                        Làm việc tất cả các ngày trong tuần (trừ tết âm lịch)
+                      </div>
+                    </div>
+                    <div class="contact_info-item">
+                      <div class="contact_info-title">Hợp tác kinh doanh</div>
+                      <div class="contact_info-phone">
+                        <span class="icon"><img src="./img/icon-phone-call.svg" alt=""></span>
+                        <a href="tel:0902 886 647" class="phone">0902 886 647</a>
+                      </div>
+                      <div class="contact_info-des">
+                        Hợp tác hàng hoá dịch vụ
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6-sm">
+                <div class="contact_title title-sc">Cửa hàng cần báo giá sỉ</div>
+                <div class="contact_des">
+                  <p>Quý khách vui lòng cung cấp thông tin, chung tôi sẽ liên hệ & tư vấn kỹ càng</p>
+                </div>
+                <div class="contact_form mt-10">
+                  <form action="">
+                    <div class="form-field">
+                      <input type="text" class="form-ctr" placeholder="Tên khách hàng">
+                    </div>
+                    <div class="form-field">
+                      <input type="text" class="form-ctr" placeholder="Tên cửa hàng">
+                    </div>
+                    <div class="form-field">
+                      <input type="text" class="form-ctr" placeholder="Địa chỉ cửa hàng">
+                    </div>
+                    <div class="form-field">
+                      <input type="tel" class="form-ctr" placeholder="Số điện thoại cửa hàng">
+                    </div>
+                    <div class="form-button">
+                      <button type="submit" class="form-submit btn-sec">Gửi thông tin</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+         <!-- FEATURE -->
+         <div class="feature">
+          <div class="container">
+            <div class="row gy-2">
+              <div class="col-3-md col-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature_item">
+                  <div class="feature_img">
+                    <img src="./img/original.png" alt="" />
+                  </div>
+                  <div class="feature_content">
+                    <h3 class="feature_title">Hàng chính hãng 100%</h3>
+                    <p class="feature_des">
+                      KhothethaoAZ cam kết bán hàng chính hãng 100%
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3-md col-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature_item">
+                  <div class="feature_img">
+                    <img src="./img/fast-delivery.png" alt="" />
+                  </div>
+                  <div class="feature_content">
+                    <h3 class="feature_title">Giao hàng siêu nhanh</h3>
+                    <p class="feature_des">
+                      KhothethaoAZ giao hàng siêu nhanh nội thành TP.HCM chỉ trong 2H
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3-md col-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature_item">
+                  <div class="feature_img">
+                    <img src="./img/refund.png" alt="" />
+                  </div>
+                  <div class="feature_content">
+                    <h3 class="feature_title">Đổi trả trong 90 ngày</h3>
+                    <p class="feature_des">
+                      KhothethaoAZ có chính sách đổi trả trong 90 ngày chưa qua sử dụng
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3-md col-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature_item">
+                  <div class="feature_img">
+                    <img src="./img/shield.png" alt="" />
+                  </div>
+                  <div class="feature_content">
+                    <h3 class="feature_title">Bảo hành trọn đời</h3>
+                    <p class="feature_des">
+                      KhothethaoAZ bảo hành miễn phí keo trọn đời suốt quá trình quý khách sử dụng
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <!-- POPUP -->
+    <div class="popup">
+      <div class="container">
+        <div class="popup-login">
+          <div class="popup-content">
+            <div class="popup-close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="popup-main">
+              <div class="popup-login-head">
+                <div class="popup-login-title">Đăng nhập</div>
+                <div class="popup-login-tooltip">
+                  Đăng nhập để xem sản phẩm, Giá sỉ, <br />
+                  Tồn kho và Đặt hàng
+                </div>
+              </div>
+              <div class="popup-login-form">
+                <form action="">
+                  <div class="main-filed form-field">
+                    <label class="main-label">Số điện thoại</label>
+                    <div class="main-input-wrap">
+                      <input
+                        type="text"
+                        class="main-input"
+                        placeholder="Số điện thoại"
+                      />
+                    </div>
+                  </div>
+                  <div class="main-filed form-field">
+                    <label class="main-label">Mật khẩu</label>
+                    <div class="main-input-wrap">
+                      <input
+                        type="text"
+                        class="main-input"
+                        placeholder="Nhập email của bạn"
+                      />
+                      <i class="seepass fa-regular fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="form-button">
+                    <button type="submit" class="form-submit">Đăng nhập</button>
+                  </div>
+                  <div class="forgot-pw">
+                    <label>
+                      <input type="checkbox" />
+                      Quên mật khẩu?
+                    </label>
+                  </div>
+                  <div class="form-guide">
+                    <p>
+                      Nếu quý khách chưa có tài khoản đăng nhập, vui lòng liên
+                      hệ qua zalo hoặc số điện thoại 0906 999 247 để được cấp
+                      tài khoản
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACK TO TOP -->
+
+    <div class="side-fixed">
+      <div class="side-fixed-link">
+      <div class="side-fixed-item">
+        <a href="" class="link"><img src="./img/icon-phone-green.svg" alt=""></a>
+      </div>
+      <div class="side-fixed-item">
+        <a href="" class="link"><img src="./img/icon-zalo-color.svg" alt=""></a>
+      </div>
+
+      </div>
+      <div class="backtotop">
+        <div class="progress-wrap">
+          <i class="fa-solid fa-angles-up fa-xs"></i>
+          <svg
+            class="progress-circle svg-content"
+            width="100%"
+            height="100%"
+            viewBox="-1 -1 102 102"
+          >
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer_top">
+        <div class="container">
+          <div class="footer_logo">
+            <div class="logo-box">
+              <a href=""><img src="./img/logo-footer.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="footer_main">
+            <div class="row gy-1">
+              <div class="col col-4-md col-6-xxs">
+                <div class="footer_info">
+                  <div class="footer_info-item">
+                    <div class="footer_info-title">
+                      <span class="icon"
+                        ><img src="./img/icon-map.svg" alt=""
+                      /></span>
+                      <span class="text">ĐỊA CHỈ</span>
+                    </div>
+                    <div class="footer_info-detail">
+                      <p class="text">09 Cô Bắc, P.1, Q.Phú Nhuận, tp.HCM</p>
+                    </div>
+                  </div>
+                  <div class="footer_info-item">
+                    <div class="footer_info-title">
+                      <span class="icon"
+                        ><img src="./img/icon-phone-call-black.svg" alt=""
+                      /></span>
+                      <span class="text">SỐ ĐIỆN THOẠI</span>
+                    </div>
+                    <div class="footer_info-detail">
+                      <a href="tel:0902 979 384" class="link">0902 979 384</a>
+                    </div>
+                  </div>
+                  <div class="footer_info-item">
+                    <div class="footer_info-title">
+                      <span class="icon"
+                        ><img src="./img/icon-mail.svg" alt=""
+                      /></span>
+                      <span class="text">EMAIL</span>
+                    </div>
+                    <div class="footer_info-detail">
+                      <a href="mailto:hattrick.vnshop@gmail.com" class="link"
+                        >hattrick.vnshop@gmail.com</a
+                      >
+                    </div>
+                  </div>
+                  <div class="footer_info-item">
+                    <div class="footer_info-title">
+                      <span class="icon"
+                        ><img src="./img/icon-clock-black.svg" alt=""
+                      /></span>
+                      <span class="text">EMAIL</span>
+                    </div>
+                    <div class="footer_info-detail">
+                      <p class="text">
+                        Giờ mở cửa: Thứ 2 - Thứ 7 (9:00 - 20h00) <br />
+                        Riêng Chủ nhật (9:00 - 18:00)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-3-md col-6">
+                <h3 class="footer_title">CHĂM SÓC KHÁCH HÀNG</h3>
+                <ul class="footer_links">
+                  <li class="footer_links-item">
+                    <a href="" class="footer_link">Chính sách thanh toán</a>
+                  </li>
+                  <li class="footer_links-item">
+                    <a href="" class="footer_link"
+                      >Chính sách vận chuyển - giao nhận</a
+                    >
+                  </li>
+                  <li class="footer_links-item">
+                    <a href="" class="footer_link"
+                      >Chính sách đổi/trả - bảo hành</a
+                    >
+                  </li>
+                  <li class="footer_links-item">
+                    <a href="" class="footer_link">Chính sách bảo mật</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col col-2-md col-6">
+                <h3 class="footer_title">VỀ CHÚNG TÔI</h3>
+                <ul class="footer_links">
+                  <li class="footer_links-item current-menu-item">
+                    <a href="" class="footer_link">Trang chủ</a>
+                  </li>
+                  <li class="footer_links-item">
+                    <a href="" class="footer_link">Giới thiệu</a>
+                  </li>
+                  <li class="footer_links-item">
+                    <a href="" class="footer_link">Dịch vụ</a>
+                  </li>
+                  <li class="footer_links-item">
+                    <a href="" class="footer_link">Sản phẩm</a>
+                  </li>
+                  <li class="footer_links-item">
+                    <a href="" class="footer_link">Tuyển dụng</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col col-3-md col-6-xxs">
+                <h3 class="footer_title">FANPAGE</h3>
+                <div class="footer_fanpage">
+                  <img src="./img/fanpage.png" alt="" />
+                </div>
+                <div class="footer_social-wrap">
+                  <div class="footer_certi">
+                    <img src="./img/bocongthuong.png" alt="" />
+                  </div>
+                  <div class="footer_social">
+                    <a href="" class="footer_social-link"
+                      ><img src="./img/icon-fb.svg" alt=""
+                    /></a>
+                    <a href="" class="footer_social-link"
+                      ><img src="./img/icon-zalo.svg" alt=""
+                    /></a>
+                    <a href="" class="footer_social-link"
+                      ><img src="./img/icon-tiktok.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_copyright">
+            <div class="mona">
+              <img src="./img/mona-copyright.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bot">
+        <div class="container container-lg">
+          <div class="row gy-2">
+            <div class="col-3-md col-6">
+              <div class="footer_bot-item">
+                <div class="title">ZALO OA</div>
+                <a href="" class="link"
+                  >Bấm quan tâm để cập nhật nhanh đơn hàng sản phẩm mới, khuyến
+                  mãi</a
+                >
+              </div>
+            </div>
+            <div class="col-3-md col-6">
+              <div class="footer_bot-item">
+                <div class="title">ZALO Hồng Thanh</div>
+                <a href="" class="link">0909 0070 16</a>
+              </div>
+            </div>
+            <div class="col-3-md col-6">
+              <div class="footer_bot-item">
+                <div class="title">ZALO Thanh Mai</div>
+                <a href="" class="link">0902 9793 84</a>
+              </div>
+            </div>
+            <div class="col-3-md col-6">
+              <div class="footer_bot-item">
+                <div class="title">ZALO Thanh Trúc</div>
+                <a href="" class="link">0906 9992 47</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="./dest/jsmain.min.js"></script>
+    <script src="./js/libs/import/gsap.js"></script>
+    <script src="./js/libs/import/ScrollTrigger.min.js"></script>
+    <script src="./js/libs/import/swiper.min.js"></script>
+    <script src="./js/libs/import/datepicker.js"></script>
+    <script src="./js/libs/import/lightgallery/js/lightgallery-all.min.js"></script>
+    <script type="module" src="./dest/main.js"></script>
+  </body>
+</html>
