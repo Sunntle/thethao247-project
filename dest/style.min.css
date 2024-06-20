@@ -10229,7 +10229,7 @@ strong {
 .mega-cate-list {
   --f-gap-x: 2.4rem;
   --f-gap-y: 5.6rem;
-  --f-col: 5;
+  --f-col: 6;
   display: flex;
   flex-wrap: wrap;
   margin-inline: calc(-0.5 * var(--f-gap-x));
