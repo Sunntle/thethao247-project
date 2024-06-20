@@ -45,7 +45,188 @@
       height: 20px;
     }
 
+    .header_action-wrap{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .header_action-wrap .header_cart{
+      margin-left: 0;
+    }
+
+    .header_action-wrap .header_search{
+      flex: 1;
+      position: relative;
+    }
+
+    .header_search .dropdown-search{
+      position: absolute;
+      top: 3.5rem;
+      right: 0;
+      width: 100%;
+      padding: 1rem;
+      z-index: 100;
+      box-shadow: 0.4rem 0.8rem 1.2rem rgba(0, 0, 0, 0.04), 0.6rem 1.6rem 2rem rgba(0, 0, 0, 0.08);
+      border-radius: 0.8rem;
+      background: #fff;
+      border-radius: 0.8rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(3rem);
+      -webkit-transform: translateX(3rem);
+      -moz-transform: translateX(3rem);
+      -ms-transform: translateX(3rem);
+      -o-transform: translateX(3rem);
+      transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+
+    .header_search .dropdown-search.show{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    } 
+
+    .header_search .close-icon{
+        right: 11.8rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5rem;
+        width: 2rem;
+        height: 2rem;
+        opacity: 0;
+        transition: all .4s;
+    }
+    .header_search .close-icon.show{
+      opacity: 1;
+    }
+    .header_search button{
+      background-color: transparent;
+      border: none;
+    }
+    #input-search::after{
+      position:absolute;
+      top: 0;
+      content: "x";
+      right:50px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .header_action-wrap .header_cta{
+      flex: 1;
+      column-gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .header_search .dropdown-search__top{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .header_search .dropdown-search__main{
+      max-height: 35rem;
+      overflow-y: auto;
+    }
+    .header_search .dropdown-search__item{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: .5rem 0 .5rem 1rem;
+      font-size: 1.4rem;
+
+    }
+    .header_search .dropdown-search__item.product{
+      padding: 1rem 0 1rem 1rem;
+    }
+    .dropdown-search__item.product ~ .dropdown-search__item.product{
+      border-top: 1px solid rgba(161, 159, 159, 0.308);
+    }
+    .dropdown-search__item.product .image{
+        width: 110px;
+    }
+    .dropdown-search__item.product .content .title{
+      font-weight: 600;
+    }
+    .dropdown-search__item.product .content .wrap-price{
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .dropdown-search__item.product .content .wrap-price .price{
+      color: red;
+      font-weight: 600;
+    }
+    .dropdown-search__item.product .content .wrap-price .default-price{
+      color: gray;
+      text-decoration: line-through;
+      font-size: 1.2rem;
+    }
+    .header_search .dropdown-search__title{
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      color: rgb(147, 145, 145);
+    }
+
+    .header_search .dropdown-search__bottom .content{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .header_search .dropdown-search__bottom-item{
+      padding: 1rem 1.5rem;
+      background-color: rgb(223, 223, 223);
+      border-radius: 10rem;
+      font-size: 1.4rem;
+    }
+    .header_search .dropdown-search__bottom:has(.link){
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .empty-content__text{
+      font-size: 1.4rem;
+      color: rgba(201, 201, 201, 0.825);
+    }
   </style>
+ 
+<style>
+
+      @media screen and (min-width: 769px) {
+        .header_action-wrap .mobile{
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .header_action-wrap{
+          flex: 1;
+        }
+        .header_icon::before{
+          display: none;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .header_action-wrap .header_cta{
+          display: none;
+        }
+      }
+
+</style>
+
   <body>
     <!-- HEADER -->
     <header class="header-wrap">
@@ -62,19 +243,6 @@
             <div class="col-9-lg">
               <div class="header_main">
                 <div class="header_top">
-                  <div class="header_cart mobile">
-                    <div class="header_item">
-                      <a href="" class="cart-link">
-                        <span class="text"> Giỏ hàng </span>
-                        <span class="cart-hover">
-                          <span class="header_icon"
-                            ><img src="./img/icon-shopping-bag.svg" alt=""
-                          /></span>
-                          <span class="numb">01</span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
                   <div class="header_detail">
                     <div class="header_item">
                       <span class="title">Làm việc: </span>
@@ -87,6 +255,146 @@
                         ><img src="./img/icon-clock.svg" alt=""
                       /></span>
                     </div>
+                  </div>
+                </div>
+                <div class="header_mid">
+                  <div class="header_toggle toggle-menu">
+                    <div class="ham">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                <div class="header_action-wrap">
+                  <div class="header_search">
+                    <div class="form-wrap">
+                      <form action="">
+                        <div class="form-field">
+                          <input
+                            type="text"
+                            class="form-ctr"
+                            placeholder="Tìm sản phẩm"
+                            id="input-search"
+                            type="search"
+                          />
+                          <div class="close-icon"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="14" height="14"
+                                viewBox="0 0 50 50">
+                                <path
+                                  d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z">
+                                </path>
+                              </svg></button></div>
+                          <div class="form-button">
+                            <button type="submit" class="form-submit">
+                              <img src="./img/icon-search.svg" alt="" />
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="dropdown-search">
+                      <!-- <div class="dropdown-search__top">
+                          <p class="dropdown-search__title">Lịch sử tìm kiếm</p>
+                          <button type="button">Xoá lịch sử</button>
+                      </div>
+                      <div class="dropdown-search__main">
+                        <div class="dropdown-search__item">
+                          <svg fill="#000000" height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.15 219.15" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M109.575,0C49.156,0,0.001,49.155,0.001,109.574c0,60.42,49.154,109.576,109.573,109.576 c60.42,0,109.574-49.156,109.574-109.576C219.149,49.155,169.995,0,109.575,0z M109.575,204.15 c-52.148,0-94.573-42.427-94.573-94.576C15.001,57.426,57.427,15,109.575,15c52.148,0,94.574,42.426,94.574,94.574 C204.149,161.724,161.723,204.15,109.575,204.15z"></path> <path d="M166.112,108.111h-52.051V51.249c0-4.142-3.357-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5v64.362c0,4.142,3.358,7.5,7.5,7.5 h59.551c4.143,0,7.5-3.358,7.5-7.5C173.612,111.469,170.254,108.111,166.112,108.111z"></path> </g> </g></svg>
+                          <span>Áo Mu</span>
+                        </div>
+                        <div class="dropdown-search__item">
+                          <svg fill="#000000" height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.15 219.15" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M109.575,0C49.156,0,0.001,49.155,0.001,109.574c0,60.42,49.154,109.576,109.573,109.576 c60.42,0,109.574-49.156,109.574-109.576C219.149,49.155,169.995,0,109.575,0z M109.575,204.15 c-52.148,0-94.573-42.427-94.573-94.576C15.001,57.426,57.427,15,109.575,15c52.148,0,94.574,42.426,94.574,94.574 C204.149,161.724,161.723,204.15,109.575,204.15z"></path> <path d="M166.112,108.111h-52.051V51.249c0-4.142-3.357-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5v64.362c0,4.142,3.358,7.5,7.5,7.5 h59.551c4.143,0,7.5-3.358,7.5-7.5C173.612,111.469,170.254,108.111,166.112,108.111z"></path> </g> </g></svg>
+                          <span>Áo Mu</span>
+                        </div>
+                        <div class="dropdown-search__item">
+                          <svg fill="#000000" height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.15 219.15" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M109.575,0C49.156,0,0.001,49.155,0.001,109.574c0,60.42,49.154,109.576,109.573,109.576 c60.42,0,109.574-49.156,109.574-109.576C219.149,49.155,169.995,0,109.575,0z M109.575,204.15 c-52.148,0-94.573-42.427-94.573-94.576C15.001,57.426,57.427,15,109.575,15c52.148,0,94.574,42.426,94.574,94.574 C204.149,161.724,161.723,204.15,109.575,204.15z"></path> <path d="M166.112,108.111h-52.051V51.249c0-4.142-3.357-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5v64.362c0,4.142,3.358,7.5,7.5,7.5 h59.551c4.143,0,7.5-3.358,7.5-7.5C173.612,111.469,170.254,108.111,166.112,108.111z"></path> </g> </g></svg>
+                          <span>Áo Mu</span>
+                        </div>
+                        <div class="dropdown-search__item">
+                          <svg fill="#000000" height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.15 219.15" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M109.575,0C49.156,0,0.001,49.155,0.001,109.574c0,60.42,49.154,109.576,109.573,109.576 c60.42,0,109.574-49.156,109.574-109.576C219.149,49.155,169.995,0,109.575,0z M109.575,204.15 c-52.148,0-94.573-42.427-94.573-94.576C15.001,57.426,57.427,15,109.575,15c52.148,0,94.574,42.426,94.574,94.574 C204.149,161.724,161.723,204.15,109.575,204.15z"></path> <path d="M166.112,108.111h-52.051V51.249c0-4.142-3.357-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5v64.362c0,4.142,3.358,7.5,7.5,7.5 h59.551c4.143,0,7.5-3.358,7.5-7.5C173.612,111.469,170.254,108.111,166.112,108.111z"></path> </g> </g></svg>
+                          <span>Áo Mu</span>
+                        </div>
+                        <div class="dropdown-search__item">
+                          <svg fill="#000000" height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.15 219.15" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M109.575,0C49.156,0,0.001,49.155,0.001,109.574c0,60.42,49.154,109.576,109.573,109.576 c60.42,0,109.574-49.156,109.574-109.576C219.149,49.155,169.995,0,109.575,0z M109.575,204.15 c-52.148,0-94.573-42.427-94.573-94.576C15.001,57.426,57.427,15,109.575,15c52.148,0,94.574,42.426,94.574,94.574 C204.149,161.724,161.723,204.15,109.575,204.15z"></path> <path d="M166.112,108.111h-52.051V51.249c0-4.142-3.357-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5v64.362c0,4.142,3.358,7.5,7.5,7.5 h59.551c4.143,0,7.5-3.358,7.5-7.5C173.612,111.469,170.254,108.111,166.112,108.111z"></path> </g> </g></svg>
+                          <span>Áo Mu</span>
+                        </div>
+                      </div>
+                      <p class="dropdown-search__title">Từ khóa phổ biến</p>
+                      <div class="dropdown-search__bottom">
+                        <div class="content">
+                          <span class="dropdown-search__bottom-item">Áo Mu</span>
+                          <span class="dropdown-search__bottom-item">Áo</span>
+                          <span class="dropdown-search__bottom-item">Quần messi</span>
+                        </div>
+                      </div> -->
+                    </div>
+                    <!-- <div class="dropdown-search">
+                      <div class="dropdown-search__top">
+                          <p>Có 296 sản phẩm</p>
+                      </div>
+                      <div class="dropdown-search__main">
+                        <div class="dropdown-search__item product">
+                          <div class="image">
+                            <img src="./img/sp-1.png" alt="">
+                          </div>
+                          <div class="content">
+                            <h4 class="title">Giày bóng đá</h4>
+                            <div class="wrap-price">
+                              <p class="price">290000vnđ</p>
+                              <p class="default-price">290000vnđ</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="dropdown-search__item product">
+                          <div class="image">
+                            <img src="./img/sp-1.png" alt="">
+                          </div>
+                          <div class="content">
+                            <h4 class="title">Giày bóng đá</h4>
+                            <div class="wrap-price">
+                              <p class="price">290000vnđ</p>
+                              <p class="default-price">290000vnđ</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="dropdown-search__item product">
+                          <div class="image">
+                            <img src="./img/sp-1.png" alt="">
+                          </div>
+                          <div class="content">
+                            <h4 class="title">Giày bóng đá</h4>
+                            <div class="wrap-price">
+                              <p class="price">290000vnđ</p>
+                              <p class="default-price">290000vnđ</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="dropdown-search__item product">
+                          <div class="image">
+                            <img src="./img/sp-1.png" alt="">
+                          </div>
+                          <div class="content">
+                            <h4 class="title">Giày bóng đá</h4>
+                            <div class="wrap-price">
+                              <p class="price">290000vnđ</p>
+                              <p class="default-price">290000vnđ</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="dropdown-search__item product">
+                          <div class="image">
+                            <img src="./img/sp-1.png" alt="">
+                          </div>
+                          <div class="content">
+                            <h4 class="title">Giày bóng đá</h4>
+                            <div class="wrap-price">
+                              <p class="price">290000vnđ</p>
+                              <p class="default-price">290000vnđ</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-search__bottom">
+                        <a class="link">Xem tất cả sản phẩm có chứa <strong>A</strong></a>
+                      </div>
+                    </div> -->
                   </div>
                   <div class="header_cta">
                     <div class="header_stt">
@@ -105,32 +413,778 @@
                         /></span>
                       </a>
                     </div>
-                  </div>
-                </div>
-                <div class="header_mid">
-                  <div class="header_toggle toggle-menu">
-                    <div class="ham">
-                      <span></span><span></span><span></span>
-                    </div>
-                  </div>
-                  <div class="header_search">
-                    <div class="form-wrap">
-                      <form action="">
-                        <div class="form-field">
-                          <input
-                            type="text"
-                            class="form-ctr"
-                            placeholder="Tìm sản phẩm"
-                          />
-                          <div class="form-button">
-                            <button type="submit" class="form-submit">
-                              <img src="./img/icon-search.svg" alt="" />
-                            </button>
+                    <div class="header_cart">
+                      <div class="header_item">
+                        <a href="" class="cart-link">
+                          <span class="te"> Giỏ hàng </span>
+                          <span class="cart-hover">
+                            <span class="header_icon"
+                              ><img src="./img/icon-shopping-bag.svg" alt=""
+                            /></span>
+                            <!-- Change here -->
+                            <span class="counter-number" >20
+                          </span>
+                        </a>
+                      </div>
+                      <div class="minicart">
+                        <div class="minicart-container">
+                          <div class="row">
+                            <div class="col-left">
+                              <div class="minicart-title">
+                                Giỏ hàng
+                                <a href="" class="goto-cart">
+                                  Xem giỏ hàng
+                                  <span class="arrow">
+                                    <i class="fa-solid fa-angles-right fa-xs"></i>
+                                  </span>
+                                </a>
+                              </div>
+                              <div class="product">
+                                <div class="product-table">
+                                  <div class="product-item block-product">
+                                    <div class="product-item-head">
+                                      <div class="product-about">
+                                        <div class="product-image">
+                                          <div class="img-wrap">
+                                            <a href="">
+                                              <img src="./img/sp-11.png" alt="" />
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div class="product-name">
+                                          <a href="" class="name">
+                                            Giày Pan Tango II 2023
+                                          </a>
+                                          <div class="color">
+                                            4 màu [<span class="color-inner"
+                                              >Màu trắng</span
+                                            >
+                                            ]
+                                          </div>
+                                          <div class="product-button">
+                                            <span
+                                              class="btn-inner edit block-product-edit-btn"
+                                              >Sửa đơn</span
+                                            >
+                                            <span class="btn-inner remove"
+                                              >Xoá</span
+                                            >
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-price">
+                                        <div class="text-inner">350,000 đ</div>
+                                      </div>
+                                      <div class="product-qty">
+                                        <span class="label">Số lượng: </span>
+                                        <input
+                                          type="number"
+                                          class="qty-numb"
+                                          readonly
+                                          value="10"
+                                        />
+                                      </div>
+                                      <div class="product-total">
+                                        <div class="price">250,000 đ</div>
+                                        <div class="discount">-33%</div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="product-item-edit block-product-edit"
+                                    >
+                                      <div class="edit-block">
+                                        <div class="edit-block-head">
+                                          <div class="edit-block-item">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                Tồn kho
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                Số lượng
+                                              </div>
+                                              <div class="edit-block-update">
+                                                Cập nhật số lượng
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-bot">
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input select-qty-count"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="product-item block-product">
+                                    <div class="product-item-head">
+                                      <div class="product-about">
+                                        <div class="product-image">
+                                          <div class="img-wrap">
+                                            <a href="">
+                                              <img src="./img/sp-11.png" alt="" />
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div class="product-name">
+                                          <a href="" class="name">
+                                            Giày Pan Tango II 2023
+                                          </a>
+                                          <div class="color">
+                                            4 màu [<span class="color-inner"
+                                              >Màu trắng</span
+                                            >
+                                            ]
+                                          </div>
+                                          <div class="product-button">
+                                            <span
+                                              class="btn-inner edit block-product-edit-btn"
+                                              >Sửa đơn</span
+                                            >
+                                            <span class="btn-inner remove"
+                                              >Xoá</span
+                                            >
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-price">
+                                        <div class="text-inner">350,000 đ</div>
+                                      </div>
+                                      <div class="product-qty">
+                                        <span class="label">Số lượng: </span>
+                                        <input
+                                          type="number"
+                                          class="qty-numb"
+                                          readonly
+                                          value="10"
+                                        />
+                                      </div>
+                                      <div class="product-total">
+                                        <div class="price">250,000 đ</div>
+                                        <div class="discount">-33%</div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="product-item-edit block-product-edit"
+                                    >
+                                      <div class="edit-block">
+                                        <div class="edit-block-head">
+                                          <div class="edit-block-item">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                Tồn kho
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                Số lượng
+                                              </div>
+                                              <div class="edit-block-update">
+                                                Cập nhật số lượng
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-bot">
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input select-qty-count"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="product-item block-product">
+                                    <div class="product-item-head">
+                                      <div class="product-about">
+                                        <div class="product-image">
+                                          <div class="img-wrap">
+                                            <a href="">
+                                              <img src="./img/sp-11.png" alt="" />
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div class="product-name">
+                                          <a href="" class="name">
+                                            Giày Pan Tango II 2023
+                                          </a>
+                                          <div class="color">
+                                            4 màu [<span class="color-inner"
+                                              >Màu trắng</span
+                                            >
+                                            ]
+                                          </div>
+                                          <div class="product-button">
+                                            <span
+                                              class="btn-inner edit block-product-edit-btn"
+                                              >Sửa đơn</span
+                                            >
+                                            <span class="btn-inner remove"
+                                              >Xoá</span
+                                            >
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-price">
+                                        <div class="text-inner">350,000 đ</div>
+                                      </div>
+                                      <div class="product-qty">
+                                        <span class="label">Số lượng: </span>
+                                        <input
+                                          type="number"
+                                          class="qty-numb"
+                                          readonly
+                                          value="10"
+                                        />
+                                      </div>
+                                      <div class="product-total">
+                                        <div class="price">250,000 đ</div>
+                                        <div class="discount">-33%</div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="product-item-edit block-product-edit"
+                                    >
+                                      <div class="edit-block">
+                                        <div class="edit-block-head">
+                                          <div class="edit-block-item">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                Tồn kho
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                Số lượng
+                                              </div>
+                                              <div class="edit-block-update">
+                                                Cập nhật số lượng
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-bot">
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input select-qty-count"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="product-item block-product">
+                                    <div class="product-item-head">
+                                      <div class="product-about">
+                                        <div class="product-image">
+                                          <div class="img-wrap">
+                                            <a href="">
+                                              <img src="./img/sp-11.png" alt="" />
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div class="product-name">
+                                          <a href="" class="name">
+                                            Giày Pan Tango II 2023
+                                          </a>
+                                          <div class="color">
+                                            4 màu [<span class="color-inner"
+                                              >Màu trắng</span
+                                            >
+                                            ]
+                                          </div>
+                                          <div class="product-button">
+                                            <span
+                                              class="btn-inner edit block-product-edit-btn"
+                                              >Sửa đơn</span
+                                            >
+                                            <span class="btn-inner remove"
+                                              >Xoá</span
+                                            >
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-price">
+                                        <div class="text-inner">350,000 đ</div>
+                                      </div>
+                                      <div class="product-qty">
+                                        <span class="label">Số lượng: </span>
+                                        <input
+                                          type="number"
+                                          class="qty-numb"
+                                          readonly
+                                          value="10"
+                                        />
+                                      </div>
+                                      <div class="product-total">
+                                        <div class="price">250,000 đ</div>
+                                        <div class="discount">-33%</div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="product-item-edit block-product-edit"
+                                    >
+                                      <div class="edit-block">
+                                        <div class="edit-block-head">
+                                          <div class="edit-block-item">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                Tồn kho
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                Số lượng
+                                              </div>
+                                              <div class="edit-block-update">
+                                                Cập nhật số lượng
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="edit-block-bot">
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input select-qty-count"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="edit-block-item select-qty">
+                                            <div class="edit-block-row">
+                                              <div class="edit-block-size">
+                                                Size 39
+                                              </div>
+                                              <div class="edit-block-inventory">
+                                                250 đôi
+                                              </div>
+                                              <div class="edit-block-qty">
+                                                <input
+                                                  type="number"
+                                                  class="qty-input"
+                                                  value="100"
+                                                />
+                                              </div>
+                                              <div class="edit-block-update">
+                                                <div class="btn-wrap">
+                                                  <span
+                                                    class="btn-update btn-minus"
+                                                    ><img
+                                                      src="./img/icon-minus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                  <span
+                                                    class="btn-update btn-plus"
+                                                    ><img
+                                                      src="./img/icon-plus.svg"
+                                                      alt=""
+                                                  /></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-right">
+                              <div class="minicart-price">
+                                <div class="title">Tạm tính</div>
+                                <ul class="minicart-detail">
+                                  <li class="li">
+                                    <div class="li-left">Mặt hàng</div>
+                                    <div class="li-right">10 SP</div>
+                                  </li>
+                                  <li class="li">
+                                    <div class="li-left">Shippingg</div>
+                                    <div class="li-right">...</div>
+                                  </li>
+                                  <li class="li">
+                                    <div class="li-left">Thanh toán</div>
+                                    <div class="li-right">...</div>
+                                  </li>
+                                  <li class="li">
+                                    <div class="li-left">Giao nhận</div>
+                                    <div class="li-right">...</div>
+                                  </li>
+                                  <li class="li">
+                                    <div class="li-left">Giao nhận</div>
+                                    <div class="li-right">...</div>
+                                  </li>
+                                </ul>
+                                <div class="minicart-price-total">
+                                  <span>Tổng</span>
+                                  <span class="price">50,000,000 đ</span>
+                                </div>
+                                <a href="" class="minicart-price-pay">
+                                  Tiến hành thanh toán
+                                </a>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
+                  <div class="header_account block-account authorization-link-mobile mobile">
+                    <a href="https://247thethaosi.vn/customer/account/" class="header_item" id="customer-popup-sign-in">
+                        <span class="header_icon"><img src="https://247thethaosi.vn//pub/static/frontend/MonaTheme/New/vi_VN/Magento_Theme/images/icon-user.svg" alt=""></span>
+                    </a>
+                </div>
+                </div>
                 </div>
                 <div class="header_bot">
                   <div class="header_nav">
@@ -223,770 +1277,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="header_cart">
-                    <div class="header_item">
-                      <a href="" class="cart-link">
-                        <span class="te"> Giỏ hàng </span>
-                        <span class="cart-hover">
-                          <span class="header_icon"
-                            ><img src="./img/icon-shopping-bag.svg" alt=""
-                          /></span>
-                          <span class="counter-number" >20
-                        </span>
-                      </a>
-                    </div>
-                    <div class="minicart">
-                      <div class="minicart-container">
-                        <div class="row">
-                          <div class="col-left">
-                            <div class="minicart-title">
-                              Giỏ hàng
-                              <a href="" class="goto-cart">
-                                Xem giỏ hàng
-                                <span class="arrow">
-                                  <i class="fa-solid fa-angles-right fa-xs"></i>
-                                </span>
-                              </a>
-                            </div>
-                            <div class="product">
-                              <div class="product-table">
-                                <div class="product-item block-product">
-                                  <div class="product-item-head">
-                                    <div class="product-about">
-                                      <div class="product-image">
-                                        <div class="img-wrap">
-                                          <a href="">
-                                            <img src="./img/sp-11.png" alt="" />
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <div class="product-name">
-                                        <a href="" class="name">
-                                          Giày Pan Tango II 2023
-                                        </a>
-                                        <div class="color">
-                                          4 màu [<span class="color-inner"
-                                            >Màu trắng</span
-                                          >
-                                          ]
-                                        </div>
-                                        <div class="product-button">
-                                          <span
-                                            class="btn-inner edit block-product-edit-btn"
-                                            >Sửa đơn</span
-                                          >
-                                          <span class="btn-inner remove"
-                                            >Xoá</span
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="product-price">
-                                      <div class="text-inner">350,000 đ</div>
-                                    </div>
-                                    <div class="product-qty">
-                                      <span class="label">Số lượng: </span>
-                                      <input
-                                        type="number"
-                                        class="qty-numb"
-                                        readonly
-                                        value="10"
-                                      />
-                                    </div>
-                                    <div class="product-total">
-                                      <div class="price">250,000 đ</div>
-                                      <div class="discount">-33%</div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="product-item-edit block-product-edit"
-                                  >
-                                    <div class="edit-block">
-                                      <div class="edit-block-head">
-                                        <div class="edit-block-item">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              Tồn kho
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              Số lượng
-                                            </div>
-                                            <div class="edit-block-update">
-                                              Cập nhật số lượng
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="edit-block-bot">
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input select-qty-count"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="product-item block-product">
-                                  <div class="product-item-head">
-                                    <div class="product-about">
-                                      <div class="product-image">
-                                        <div class="img-wrap">
-                                          <a href="">
-                                            <img src="./img/sp-11.png" alt="" />
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <div class="product-name">
-                                        <a href="" class="name">
-                                          Giày Pan Tango II 2023
-                                        </a>
-                                        <div class="color">
-                                          4 màu [<span class="color-inner"
-                                            >Màu trắng</span
-                                          >
-                                          ]
-                                        </div>
-                                        <div class="product-button">
-                                          <span
-                                            class="btn-inner edit block-product-edit-btn"
-                                            >Sửa đơn</span
-                                          >
-                                          <span class="btn-inner remove"
-                                            >Xoá</span
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="product-price">
-                                      <div class="text-inner">350,000 đ</div>
-                                    </div>
-                                    <div class="product-qty">
-                                      <span class="label">Số lượng: </span>
-                                      <input
-                                        type="number"
-                                        class="qty-numb"
-                                        readonly
-                                        value="10"
-                                      />
-                                    </div>
-                                    <div class="product-total">
-                                      <div class="price">250,000 đ</div>
-                                      <div class="discount">-33%</div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="product-item-edit block-product-edit"
-                                  >
-                                    <div class="edit-block">
-                                      <div class="edit-block-head">
-                                        <div class="edit-block-item">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              Tồn kho
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              Số lượng
-                                            </div>
-                                            <div class="edit-block-update">
-                                              Cập nhật số lượng
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="edit-block-bot">
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input select-qty-count"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="product-item block-product">
-                                  <div class="product-item-head">
-                                    <div class="product-about">
-                                      <div class="product-image">
-                                        <div class="img-wrap">
-                                          <a href="">
-                                            <img src="./img/sp-11.png" alt="" />
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <div class="product-name">
-                                        <a href="" class="name">
-                                          Giày Pan Tango II 2023
-                                        </a>
-                                        <div class="color">
-                                          4 màu [<span class="color-inner"
-                                            >Màu trắng</span
-                                          >
-                                          ]
-                                        </div>
-                                        <div class="product-button">
-                                          <span
-                                            class="btn-inner edit block-product-edit-btn"
-                                            >Sửa đơn</span
-                                          >
-                                          <span class="btn-inner remove"
-                                            >Xoá</span
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="product-price">
-                                      <div class="text-inner">350,000 đ</div>
-                                    </div>
-                                    <div class="product-qty">
-                                      <span class="label">Số lượng: </span>
-                                      <input
-                                        type="number"
-                                        class="qty-numb"
-                                        readonly
-                                        value="10"
-                                      />
-                                    </div>
-                                    <div class="product-total">
-                                      <div class="price">250,000 đ</div>
-                                      <div class="discount">-33%</div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="product-item-edit block-product-edit"
-                                  >
-                                    <div class="edit-block">
-                                      <div class="edit-block-head">
-                                        <div class="edit-block-item">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              Tồn kho
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              Số lượng
-                                            </div>
-                                            <div class="edit-block-update">
-                                              Cập nhật số lượng
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="edit-block-bot">
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input select-qty-count"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="product-item block-product">
-                                  <div class="product-item-head">
-                                    <div class="product-about">
-                                      <div class="product-image">
-                                        <div class="img-wrap">
-                                          <a href="">
-                                            <img src="./img/sp-11.png" alt="" />
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <div class="product-name">
-                                        <a href="" class="name">
-                                          Giày Pan Tango II 2023
-                                        </a>
-                                        <div class="color">
-                                          4 màu [<span class="color-inner"
-                                            >Màu trắng</span
-                                          >
-                                          ]
-                                        </div>
-                                        <div class="product-button">
-                                          <span
-                                            class="btn-inner edit block-product-edit-btn"
-                                            >Sửa đơn</span
-                                          >
-                                          <span class="btn-inner remove"
-                                            >Xoá</span
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="product-price">
-                                      <div class="text-inner">350,000 đ</div>
-                                    </div>
-                                    <div class="product-qty">
-                                      <span class="label">Số lượng: </span>
-                                      <input
-                                        type="number"
-                                        class="qty-numb"
-                                        readonly
-                                        value="10"
-                                      />
-                                    </div>
-                                    <div class="product-total">
-                                      <div class="price">250,000 đ</div>
-                                      <div class="discount">-33%</div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="product-item-edit block-product-edit"
-                                  >
-                                    <div class="edit-block">
-                                      <div class="edit-block-head">
-                                        <div class="edit-block-item">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              Tồn kho
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              Số lượng
-                                            </div>
-                                            <div class="edit-block-update">
-                                              Cập nhật số lượng
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="edit-block-bot">
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input select-qty-count"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="edit-block-item select-qty">
-                                          <div class="edit-block-row">
-                                            <div class="edit-block-size">
-                                              Size 39
-                                            </div>
-                                            <div class="edit-block-inventory">
-                                              250 đôi
-                                            </div>
-                                            <div class="edit-block-qty">
-                                              <input
-                                                type="number"
-                                                class="qty-input"
-                                                value="100"
-                                              />
-                                            </div>
-                                            <div class="edit-block-update">
-                                              <div class="btn-wrap">
-                                                <span
-                                                  class="btn-update btn-minus"
-                                                  ><img
-                                                    src="./img/icon-minus.svg"
-                                                    alt=""
-                                                /></span>
-                                                <span
-                                                  class="btn-update btn-plus"
-                                                  ><img
-                                                    src="./img/icon-plus.svg"
-                                                    alt=""
-                                                /></span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-right">
-                            <div class="minicart-price">
-                              <div class="title">Tạm tính</div>
-                              <ul class="minicart-detail">
-                                <li class="li">
-                                  <div class="li-left">Mặt hàng</div>
-                                  <div class="li-right">10 SP</div>
-                                </li>
-                                <li class="li">
-                                  <div class="li-left">Shippingg</div>
-                                  <div class="li-right">...</div>
-                                </li>
-                                <li class="li">
-                                  <div class="li-left">Thanh toán</div>
-                                  <div class="li-right">...</div>
-                                </li>
-                                <li class="li">
-                                  <div class="li-left">Giao nhận</div>
-                                  <div class="li-right">...</div>
-                                </li>
-                                <li class="li">
-                                  <div class="li-left">Giao nhận</div>
-                                  <div class="li-right">...</div>
-                                </li>
-                              </ul>
-                              <div class="minicart-price-total">
-                                <span>Tổng</span>
-                                <span class="price">50,000,000 đ</span>
-                              </div>
-                              <a href="" class="minicart-price-pay">
-                                Tiến hành thanh toán
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              
                 </div>
               </div>
             </div>
@@ -2706,5 +2997,125 @@
     <script src="./js/libs/import/datepicker.js"></script>
     <script src="./js/libs/import/lightgallery/js/lightgallery-all.min.js"></script>
     <script type="module" src="./dest/main.js"></script>
+    <script>
+      const searchElement = document.querySelector("#input-search")
+      const dropDownSearch = document.querySelector(".header_search .dropdown-search")
+      const closeButton = document.querySelector(".header_search .close-icon")
+      const headerSearch = document.querySelector(".header_search")
+      let fakeProduct = {
+        total: 296,
+        listProduct: [{
+          image: "./img/sp-1.png",
+          label: "Giày bóng đá",
+          price: 290000,
+          default_price: 290000,
+
+        }, {
+          image: "./img/sp-1.png",
+          label: "Giày bóng đá",
+          price: 290000,
+          default_price: 290000,
+
+        }]
+      }
+
+      let fakeKeywords = ["Áo Mu", "Panasonic"]
+      let fakePopularKeywords = ["Giày bóng đá", "quần thể thao", "áo"]
+      const emptyContentText = "<p class='empty-content__text'>Không có nội dung để hiển thị</p>"
+
+      const clearBtn = () => {
+        const clearHistoryBtn = document.querySelector(".btn-delete-history")
+        clearHistoryBtn.addEventListener("click", event => {
+          const contentElement = document.querySelector(".dropdown-search__main")
+          const contentElement2 = document.querySelector(".dropdown-search__bottom .content")
+          // const dropDownSearch = document.querySelector(".header_search .dropdown-search")
+          contentElement.innerHTML = emptyContentText
+          contentElement2.innerHTML = emptyContentText
+          fakeKeywords = []
+          fakePopularKeywords = []
+          clearHistoryBtn.remove()
+        })
+      }
+      
+      const contentSearchHasProduct = ({ result, keyword }) => {
+        const { total, listProduct } = result
+        const list = listProduct?.map((el, key) => {
+          return `<div class="dropdown-search__item product">
+                <div class="image">
+                  <img src=${el?.image} alt="" />
+                </div>
+                <div class="content">
+                  <h4 class="title">${el?.label}</h4>
+                  <div class="wrap-price">
+                    <p class="price">${el?.price}vnđ</p>
+                    <p class="default-price">${el?.price}vnđ</p>
+                  </div>
+                </div>
+              </div>`
+        })
+        return `<div class="dropdown-search__top">
+                                  <p>Có ${total} sản phẩm</p>
+                              </div>
+                              <div class="dropdown-search__main">
+                                ${list?.join("")}
+                              </div>
+                              <div class="dropdown-search__bottom">
+                                <a class="link">Xem tất cả sản phẩm có chứa <strong>${keyword}</strong></a>
+                              </div>`
+      }
+      
+      const contentSearchEmpty = ({ keywords, popularKeywords }) => {
+        const renderKeywords = keywords?.map(el => {
+          return `<div class="dropdown-search__item">
+                                  <svg fill="#000000" height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 219.15 219.15" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M109.575,0C49.156,0,0.001,49.155,0.001,109.574c0,60.42,49.154,109.576,109.573,109.576 c60.42,0,109.574-49.156,109.574-109.576C219.149,49.155,169.995,0,109.575,0z M109.575,204.15 c-52.148,0-94.573-42.427-94.573-94.576C15.001,57.426,57.427,15,109.575,15c52.148,0,94.574,42.426,94.574,94.574 C204.149,161.724,161.723,204.15,109.575,204.15z"></path> <path d="M166.112,108.111h-52.051V51.249c0-4.142-3.357-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5v64.362c0,4.142,3.358,7.5,7.5,7.5 h59.551c4.143,0,7.5-3.358,7.5-7.5C173.612,111.469,170.254,108.111,166.112,108.111z"></path> </g> </g></svg>
+                                  <span>${el}</span>
+                                </div>`
+        })
+        const renderPopularKeywords = popularKeywords?.map(el => {
+          return `<span class="dropdown-search__bottom-item">${el}</span>`
+        })
+        return ` <div class="dropdown-search__top">
+                                  <p class="dropdown-search__title">Lịch sử tìm kiếm</p>
+                                  ${keywords?.length > 0 ? `<button type="button" class="btn-delete-history">Xoá lịch sử</button>` : ""}
+                              </div>
+                              <div class="dropdown-search__main">
+                                ${keywords?.length > 0 ? renderKeywords?.join("") : emptyContentText}
+                              </div>
+                              <p class="dropdown-search__title">Từ khóa phổ biến</p>
+                              <div class="dropdown-search__bottom">
+                                <div class="content">
+                                  ${keywords?.length > 0 ? renderPopularKeywords?.join("") : emptyContentText}
+                                </div>
+                              </div>`
+      }
+      
+      dropDownSearch.innerHTML = contentSearchEmpty({ keywords: fakeKeywords, popularKeywords: fakePopularKeywords })
+      clearBtn()
+
+      searchElement.addEventListener("input", event => {
+        if (event.target.value.length > 0) {
+          closeButton.classList.add("show")
+          dropDownSearch.innerHTML = contentSearchHasProduct({ result: fakeProduct, keyword: event?.target?.value })
+        } else {
+          dropDownSearch.innerHTML = contentSearchEmpty({ keywords: fakeKeywords, popularKeywords: fakePopularKeywords })
+        }
+      })
+
+      closeButton.addEventListener("click", (event) => {
+        searchElement.value = ""
+        dropDownSearch.innerHTML = contentSearchEmpty({ keywords: fakeKeywords, popularKeywords: fakePopularKeywords })
+        clearBtn()
+      })
+
+      searchElement.addEventListener("focus", event => {
+        dropDownSearch.classList.add("show")
+      })
+
+      document.addEventListener("mousedown", event => {
+          if (!headerSearch.contains(event.target)) {
+            dropDownSearch.classList.remove("show");
+          }
+      });
+    </script>
   </body>
 </html>
