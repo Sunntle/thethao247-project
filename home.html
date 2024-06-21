@@ -29,7 +29,7 @@
   <style>
     @media screen and (min-width: 769px) {
       .mobile{
-        display: none!important;
+        display: none;
       }
     }
 
@@ -360,61 +360,63 @@
                     <div class="dropdown-search">
                     </div>
                   </div>
-                  <div class="header_cta header_info">
-                    <div class="header_info-select toggle-info">
-                      Thông tin
-                      <span class="arrow">
-                        <i class="fa-solid fa-caret-down fa-xs"></i>
-                      </span>
-                    </div>
-                    <div class="header_info-drop">
-                      <div class="account-wrap">
-                        <div class="account_head">
-                          <div class="account_avt">
-                            <img src="./img/user-2.png" alt="" />
+                  <div class="header_cta">
+                    <div class="header_info">
+                      <div class="header_info-select toggle-info">
+                        Thông tin
+                        <span class="arrow">
+                          <i class="fa-solid fa-caret-down fa-xs"></i>
+                        </span>
+                      </div>
+                      <div class="header_info-drop">
+                        <div class="account-wrap">
+                          <div class="account_head">
+                            <div class="account_avt">
+                              <img src="./img/user-2.png" alt="" />
+                            </div>
+                            <div class="account_name">Trần Quốc Cương</div>
+                            <div class="account_email">Quoccuong@gmail.com</div>
                           </div>
-                          <div class="account_name">Trần Quốc Cương</div>
-                          <div class="account_email">Quoccuong@gmail.com</div>
-                        </div>
-                        <ul class="account_list">
-                          <li class="account_item">
-                            <a href="" class="account_link">
-                              <span class="icon">
-                                <img src="./img/icon-user-black.svg" alt="" />
-                              </span>
-                              Thông tin tài khoản
-                            </a>
-                          </li>
-                          <li class="account_item">
-                            <a href="" class="account_link">
-                              <span class="icon">
-                                <img
-                                  src="./img/icon-file-text-black.svg"
-                                  alt=""
-                                />
-                              </span>
-                              Thông tin tài khoản
-                            </a>
-                          </li>
-                          <li class="account_item">
-                            <a href="" class="account_link">
-                              <span class="icon">
-                                <img src="./img/icon-clock-black.svg" alt="" />
-                              </span>
-                              Lịch sử đơn hàng
-                            </a>
-                          </li>
-                          <li class="account_item">
-                            <a href="" class="account_link">
-                              <span class="icon">
-                                <img src="./img/icon-clock-black.svg" alt="" />
-                              </span>
-                              Đổi mật khẩu
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="account_logout">
-                          <a href="" class="logout-btn">Đăng xuất</a>
+                          <ul class="account_list">
+                            <li class="account_item">
+                              <a href="" class="account_link">
+                                <span class="icon">
+                                  <img src="./img/icon-user-black.svg" alt="" />
+                                </span>
+                                Thông tin tài khoản
+                              </a>
+                            </li>
+                            <li class="account_item">
+                              <a href="" class="account_link">
+                                <span class="icon">
+                                  <img
+                                    src="./img/icon-file-text-black.svg"
+                                    alt=""
+                                  />
+                                </span>
+                                Thông tin tài khoản
+                              </a>
+                            </li>
+                            <li class="account_item">
+                              <a href="" class="account_link">
+                                <span class="icon">
+                                  <img src="./img/icon-clock-black.svg" alt="" />
+                                </span>
+                                Lịch sử đơn hàng
+                              </a>
+                            </li>
+                            <li class="account_item">
+                              <a href="" class="account_link">
+                                <span class="icon">
+                                  <img src="./img/icon-clock-black.svg" alt="" />
+                                </span>
+                                Đổi mật khẩu
+                              </a>
+                            </li>
+                          </ul>
+                          <div class="account_logout">
+                            <a href="" class="logout-btn">Đăng xuất</a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -3884,6 +3886,7 @@
           closeButton.classList.add("show")
           dropDownSearch.innerHTML = contentSearchHasProduct({ result: fakeProduct, keyword: event?.target?.value })
         } else {
+          closeButton.classList.remove("show")
           dropDownSearch.innerHTML = contentSearchEmpty({ keywords: fakeKeywords, popularKeywords: fakePopularKeywords })
         }
       })
@@ -3892,6 +3895,7 @@
         searchElement.value = ""
         dropDownSearch.innerHTML = contentSearchEmpty({ keywords: fakeKeywords, popularKeywords: fakePopularKeywords })
         clearBtn()
+        closeButton.classList.remove("show")
       })
 
       searchElement.addEventListener("focus", event => {
@@ -3904,40 +3908,5 @@
           }
       });
     </script>
-      function handleScroll(event) {
-        const headerBot = document.querySelector(".header_bot")
-        const headerMid = document.querySelector(".header_mid")
-        const categoryBtn = document.querySelector(".category-toggle-btn")
-        const menuLinkInfo = document.querySelector(".header_cta .toggle-info")
-        const headerWrap = document.querySelector(".header-wrap .container")
-        if (window.innerWidth > 1200) {
-          // const root = document.querySelector(':root')
-          // const currentHeight = getComputedStyle(root).getPropertyValue("--h-header")
-          // const newHeight = +currentHeight.split("rem")[0] - +(headerBot.offsetHeight/10)
-          // document.documentElement.style.setProperty("--h-header", `${newHeight}rem`)
-          if (window.pageYOffset == 0) {
-            headerBot.classList.remove("is-sticky")
-            headerMid.classList.remove("is-sticky")
-            headerWrap.classList.remove("is-sticky")
-            categoryBtn.classList.remove("show")
-            menuLinkInfo.classList.remove("show")
-          } else {
-            headerBot.classList.add("is-sticky")
-            headerMid.classList.add("is-sticky")
-            headerWrap.classList.add("is-sticky")
-            categoryBtn.classList.add("show")
-            menuLinkInfo.classList.add("show")
-          }
-        } else {
-          headerBot.classList.remove("is-sticky")
-          headerMid.classList.remove("is-sticky")
-          headerWrap.classList.remove("is-sticky")
-          categoryBtn.classList.remove("show")
-          menuLinkInfo.classList.remove("show")
-        }
-
-      }
-      document.addEventListener("scroll", handleScroll)
-    </script> -->
   </body>
 </html>
