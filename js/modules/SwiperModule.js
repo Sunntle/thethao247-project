@@ -72,6 +72,8 @@ export default function SwiperModule() {
     const swProNav = new Swiper(sliderNav, {
       spaceBetween: 8,
       slidesPerView: 4,
+      allowTouchMove: false,
+      preventInteractionOnTransition: true,
       freeMode: true,
       watchSlidesProgress: true,
     });

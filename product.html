@@ -2103,7 +2103,7 @@
                       <div class="product-box_left">
                         <div class="product-box_image">
                           <div class="slider-main">
-                            <div class="swiper ">
+                            <div class="swiper">
                               <div class="swiper-wrapper gallery-js">
                                 <div
                                   class="swiper-slide gItem"
@@ -2148,7 +2148,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="slider-nav custom-grid-swiper">
+                          <div class="slider-nav">
                             <div class="button-wrap">
                               <div class="swiper-ctr static swiper-button-prev">
                                 <i class="fa-solid fa-angle-left fa-xs"></i>
@@ -2162,10 +2162,6 @@
                                   </div>
                                 </div>
                                 <div class="swiper-slide">
-                                  <div class="img-wrap">
-                                    <img src="./img/sp-27.png" alt="" />
-                                  </div>
-                                </div>
                                 <div class="swiper-slide">
                                   <div class="img-wrap">
                                     <img src="./img/sp-28.png" alt="" />
@@ -2394,11 +2390,6 @@
                                 <div class="swiper-slide">
                                   <div class="img-wrap">
                                     <img src="./img/sp-26.png" alt="" />
-                                  </div>
-                                </div>
-                                <div class="swiper-slide">
-                                  <div class="img-wrap">
-                                    <img src="./img/sp-27.png" alt="" />
                                   </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -4325,5 +4316,17 @@
     <script src="./js/libs/import/datepicker.js"></script>
     <script src="./js/libs/import/lightgallery/js/lightgallery-all.min.js"></script>
     <script type="module" src="./dest/main.js"></script>
+    <!-- custom script here -->
+    <script>
+      const slidesWrapper = document.querySelectorAll(".slider-nav .swiper-wrapper")
+      const root = document.querySelectorAll(".product-box_image .slider-nav");
+      root.forEach(element => {
+        const slidesWrapper = element.querySelector(".slider-nav .swiper-wrapper") 
+        const slideCol = getComputedStyle(element).getPropertyValue("--slide-col")
+        const slides = slidesWrapper.querySelectorAll(".swiper-slide")
+        const row = Math.ceil(slides?.length / slideCol)
+        element.style.setProperty('--slide-height', row);
+      })
+    </script>
   </body>
 </html>
