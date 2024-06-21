@@ -3894,8 +3894,8 @@
       closeButton.addEventListener("click", (event) => {
         searchElement.value = ""
         dropDownSearch.innerHTML = contentSearchEmpty({ keywords: fakeKeywords, popularKeywords: fakePopularKeywords })
-        clearBtn()
         closeButton.classList.remove("show")
+        clearBtn()
       })
 
       searchElement.addEventListener("focus", event => {
